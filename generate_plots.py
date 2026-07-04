@@ -22,4 +22,11 @@ plt.tight_layout()
 plt.savefig('correlation_heatmap.png')
 plt.close()
 
+# 3. Performance Category by Gender
+plt.figure(figsize=(10, 6))
+sns.countplot(data=df, x='Gender', hue='Performance_Category', hue_order=['High', 'Medium', 'Low'], palette='viridis')
+plt.title('Performance Category Distribution by Gender')
+plt.savefig('performance_by_gender.png')
+plt.close()
+
 print("Plots generated successfully!")
